@@ -15,9 +15,24 @@
     combos {
         compatible = "zmk,combos";
 
-        scrollMode {
-            bindings = <&to 5>;
+        mo4 {
+            bindings = <&mo 4>;
             key-positions = <11 13>;
+        };
+
+        minus {
+            bindings = <&kp MINUS>;
+            key-positions = <20 21>;
+        };
+
+        eq {
+            bindings = <&kp EQUAL>;
+            key-positions = <32 33>;
+        };
+
+        mo5 {
+            bindings = <&mo 5>;
+            key-positions = <23 25>;
         };
     };
 
@@ -58,7 +73,7 @@
 &kp Q         &kp W  &kp E  &kp R      &kp T                                                &kp Y        &kp U  &kp I      &kp O    &kp P
 &kp A         &kp S  &kp D  &kp F      &kp G      &hmacro 5 0                   &esc_lang2  &kp H        &kp J  &kp K      &kp L    &kp COLON
 &kp Z         &kp X  &kp C  &kp V      &kp B      &mt LEFT_ALT LANG2            &kp LANG1   &kp N        &kp M  &kp COMMA  &kp DOT  &kp SLASH
-&kp LEFT_GUI  &to 5  &to 4  &kp LCTRL  &kp SPACE  &mt LEFT_SHIFT BACKSPACE      &lt 2 TAB   &lt 1 ENTER                             &kp MINUS
+&kp LEFT_GUI  &mo 5  &mo 4  &kp LCTRL  &kp SPACE  &mt LEFT_SHIFT BACKSPACE      &lt 2 TAB   &lt 1 ENTER                             &kp MINUS
             >;
 
             sensor-bindings = <&inc_dec_kp PG_UP PAGE_DOWN>;
@@ -93,10 +108,10 @@
 
         layer_4 {
             bindings = <
-&trans  &trans  &trans  &trans  &trans                      &trans     &mkp MB4   &mkp MB5   &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans      &trans  &mkp MCLK  &mkp LCLK  &mkp RCLK  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans     &trans     &trans     &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans                                   &trans
+&trans  &trans  &mkp MB4   &mkp MB5   &trans                         &trans     &mkp MB4   &mkp MB5   &trans  &trans
+&trans  &trans  &mkp LCLK  &mkp RCLK  &mkp MCLK  &trans      &trans  &mkp MCLK  &mkp LCLK  &mkp RCLK  &trans  &trans
+&trans  &trans  &trans     &trans     &trans     &trans      &trans  &trans     &trans     &trans     &trans  &trans
+&trans  &trans  &trans     &trans     &trans     &trans      &trans  &trans                                   &trans
             >;
         };
 
